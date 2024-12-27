@@ -57,7 +57,7 @@ export default function Navbar(){
       const title2= SearchParams.get("search")
 
      const listings =async ()=>{
-       fetch(`http://localhost:4000/api/dashbord/?page=${page}&search=${title2}`,{
+       fetch(`https://wanderlust-website-md7k.onrender.com/api/dashbord/?page=${page}&search=${title2}`,{
         credentials:"include"
       })
       .then((response)=>{
@@ -77,7 +77,7 @@ export default function Navbar(){
       })}
 
       const pages= async ()=>{
-        fetch(`http://localhost:4000/api/dashbord/?page=${page}&search=${title2}`,{
+        fetch(`https://wanderlust-website-md7k.onrender.com/api/dashbord/?page=${page}&search=${title2}`,{
           credentials:"include"
         })
         .then((response)=>{
@@ -117,7 +117,7 @@ export default function Navbar(){
     const MultipleWorkUser= (setting)=>{
       console.log((setting=="Logout"))
        if((setting=="Logout")){
-          fetch("http://localhost:4000/api/dashbord/logout",{
+          fetch("https://wanderlust-website-md7k.onrender.com/api/dashbord/logout",{
             method:"GET",
             credentials:"include"
           })
