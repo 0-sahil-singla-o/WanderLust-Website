@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "react-scripts build",
+    "build": "react-scripts WanderLust_Frontend",
     "start": "vite",
     "build": "vite build",
     "lint": "eslint .",
