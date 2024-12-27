@@ -46,7 +46,8 @@ const sessionOptions= {
     cookie:{
         expires: Date.now() + 7*24*60*60*1000 ,// 7 days
         maxAge:  7*24*60*60*1000,
-        httpOnly: true
+        httpOnly: true,
+        sameSite: 'none'
     },
     rolling: false,   // to like prevent the updation of expiration time after every access of session Id during request.
 }
