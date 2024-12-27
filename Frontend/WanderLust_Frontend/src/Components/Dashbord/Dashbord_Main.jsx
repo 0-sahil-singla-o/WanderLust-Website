@@ -81,23 +81,9 @@ export default function Dashbord_Main(){
     function Search(){
         SearchParams.set("title",)
     }
-    function button(){
-        fetch("http://coderbyte.com/api/challenges/json/age-counting",{
-            credentials:"include"
-        })
-        .then((response)=>{
-            if(response.ok){
-                response.json()
-                .then((result)=>{
-                    console.log(result);
-
-                })
-            }
-        })
-    }
     function edit(id){
       
-       fetch(`http://localhost:4000/api/dashbord/editlistingform/${id}`,{
+       fetch(`https://wanderlust-website-md7k.onrender.com/api/dashbord/editlistingform/${id}`,{
             method:"GET",
              credentials:"include"
         })
@@ -144,7 +130,7 @@ export default function Dashbord_Main(){
   
     }
     function Delete(id){
-        fetch(`http://localhost:4000/api/dashbord/delete/${id}`,{
+        fetch(`https://wanderlust-website-md7k.onrender.com/api/dashbord/delete/${id}`,{
             method:"DELETE",
              credentials:"include"
         })
@@ -193,7 +179,7 @@ export default function Dashbord_Main(){
     useEffect(()=>{
         let page= SearchParams.get("page");
         console.log(page)
-        fetch(`http://localhost:4000/api/dashbord/?page=${page}`,{
+        fetch(`https://wanderlust-website-md7k.onrender.com/api/dashbord/?page=${page}`,{
             method:"GET",
             credentials:"include"
         })
