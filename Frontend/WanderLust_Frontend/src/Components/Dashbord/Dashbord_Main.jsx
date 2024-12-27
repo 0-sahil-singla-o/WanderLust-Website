@@ -189,7 +189,6 @@ export default function Dashbord_Main(){
                 .then((result)=>{
                     console.log(result)
                     setListings(result.data.listings);
-                    settotalPages(result.data.totalPages)
                 })
             }
             else{
