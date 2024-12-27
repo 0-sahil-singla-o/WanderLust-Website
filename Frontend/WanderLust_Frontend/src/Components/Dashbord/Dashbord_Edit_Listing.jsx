@@ -39,7 +39,7 @@ export default function Edit_Listing(){
              formData.append("country",values.country);
              formData.append("location",values.location);
              
-             fetch(`http://localhost:4000/api/dashbord/edit/${id}`,{
+             fetch(`https://wanderlust-website-md7k.onrender.com/api/dashbord/edit/${id}`,{
                 method:"PUT",
                 body:formData,
                  credentials:"include"
