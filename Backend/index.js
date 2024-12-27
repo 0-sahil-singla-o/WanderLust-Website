@@ -120,7 +120,7 @@ passport.deserializeUser(async (_id,done)=>{
 });
 
 const corsOptions = {
-    origin: 'http://localhost:5173', // Allow requests only from this origin
+    origin: 'https://wanderlust-website-1-3g7o.onrender.com', // Allow requests only from this origin
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',         // Allow only GET and POST methods
     allowedHeaders: ['Content-Type', 'Authorization'], 
     credentials: true,// Specify allowed headers
