@@ -25,7 +25,7 @@ export default function Login(){
         validationSchema:validations,
         onSubmit: (values)=>{
             console.log(values)
-            fetch("http://localhost:4000/api/onabording/login",{
+            fetch("https://wanderlust-website-md7k.onrender.com/api/onabording/login",{
                 method:"POST",
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify(values),
@@ -48,7 +48,7 @@ export default function Login(){
         }
     })
     function SignInGoogle(){
-        fetch("http://localhost:4000/api/onabording/login/google",{
+        fetch("https://wanderlust-website-md7k.onrender.com/api/onabording/login/google",{
             method:"GET",
             credentials:"include"
         })
