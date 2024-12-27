@@ -34,7 +34,6 @@ export default function Login(){
             .then((response)=>{
                   if(response.ok){
                       navigate("/dashbord");
-                      login()
                       window.location.reload();
                   }
                   else{
