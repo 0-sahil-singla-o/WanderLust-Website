@@ -24,7 +24,7 @@ export default function Signup(){
         validationSchema:validations,
         onSubmit: (values)=>{
             console.log(values)
-            fetch("http://localhost:4000/api/onabording/register",{
+            fetch("https://wanderlust-website-md7k.onrender.com/api/onabording/register",{
                 method:"POST",
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify(values),
