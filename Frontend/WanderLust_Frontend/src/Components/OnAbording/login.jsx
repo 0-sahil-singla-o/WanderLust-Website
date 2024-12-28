@@ -25,7 +25,7 @@ export default function Login(){
         validationSchema:validations,
         onSubmit: (values)=>{
             console.log(values)
-            fetch("https://wanderlust-website-md7k.onrender.com/api/onabording/login",{
+            fetch("http://localhost:4000/api/onabording/login",{
                 method:"POST",
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify(values),
@@ -34,7 +34,6 @@ export default function Login(){
             .then((response)=>{
                   if(response.ok){
                       navigate("/dashbord");
-                      login()
                       window.location.reload();
                   }
                   else{
@@ -48,7 +47,7 @@ export default function Login(){
         }
     })
     function SignInGoogle(){
-        fetch("https://wanderlust-website-md7k.onrender.com/api/onabording/login/google",{
+        fetch("http://localhost:4000/api/onabording/login/google",{
             method:"GET",
             credentials:"include"
         })
