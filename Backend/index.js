@@ -68,7 +68,7 @@ passport.use(new GoogleStrategy(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: 'https://wanderlust-website-md7k.onrender.com/api/onabording/login/google/callback'
+      callbackURL: 'https://wanderlust-website-1-3g7o.onrender.com/api/onabording/login/google/callback'
     },
     async (accessToken, refreshToken, profile, done) => {
       try {
