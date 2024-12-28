@@ -38,7 +38,7 @@ export default function New_Listing(){
             for (let [key, value] of formdata.entries()) {
                 console.log(`${key}:`, value);
               }
-            fetch("http://localhost:4000/api/dashbord/newlisting",{
+            fetch("https://wanderlust-website-md7k.onrender.com/api/dashbord/newlisting",{
                 method:"POST",
                 body:formdata,
                  credentials:"include"

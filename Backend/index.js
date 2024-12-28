@@ -46,7 +46,8 @@ const sessionOptions= {
     cookie:{
         expires: Date.now() + 7*24*60*60*1000 ,// 7 days
         maxAge:  7*24*60*60*1000,
-        httpOnly: true
+        httpOnly: true,
+        sameSite: 'none'
     },
     rolling: false,   // to like prevent the updation of expiration time after every access of session Id during request.
 }
@@ -67,7 +68,7 @@ passport.use(new GoogleStrategy(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: 'http://localhost:4000/api/onabording/login/google/callback'
+      callbackURL: 'https://wanderlust-website-md7k.onrender.com/api/onabording/login/google/callback'
     },
     async (accessToken, refreshToken, profile, done) => {
       try {
@@ -120,7 +121,7 @@ passport.deserializeUser(async (_id,done)=>{
 });
 
 const corsOptions = {
-    origin: 'http://localhost:5173', // Allow requests only from this origin
+    origin: 'https://wanderlust-website-1-3g7o.onrender.com', // Allow requests only from this origin
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',         // Allow only GET and POST methods
     allowedHeaders: ['Content-Type', 'Authorization'], 
     credentials: true,// Specify allowed headers

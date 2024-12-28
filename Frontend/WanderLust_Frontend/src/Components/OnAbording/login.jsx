@@ -25,7 +25,7 @@ export default function Login(){
         validationSchema:validations,
         onSubmit: (values)=>{
             console.log(values)
-            fetch("http://localhost:4000/api/onabording/login",{
+            fetch("https://wanderlust-website-md7k.onrender.com/api/onabording/login",{
                 method:"POST",
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify(values),
@@ -47,7 +47,7 @@ export default function Login(){
         }
     })
     function SignInGoogle(){
-        fetch("http://localhost:4000/api/onabording/login/google",{
+        fetch("https://wanderlust-website-md7k.onrender.com/api/onabording/login/google",{
             method:"GET",
             credentials:"include"
         })
@@ -83,7 +83,7 @@ export default function Login(){
                           </div>
                           <div className="w-[100%] flex flex-col items-center text-center mt-5">
                                  <button type="submit" className="border border-1 border-black p-2 w-[90%]  md:w-[40%] font-bold" style={{borderRadius:"10px", backgroundColor:'#ff5a5f',color:"white"}}>Sign-in</button>
-                                 <button onClick={() => window.location.href = 'http://localhost:4000/api/onabording/login/google'} type="button"  className=" mt-4   flex justify-content-center md:relative border border-1 border-black p-2 w-[90%]   md:w-[40%] font-bold" style={{borderRadius:"10px", backgroundColor:'white',color:"black"}}><img className=" h-[1.3rem] w-[1.3rem] xl:h-[1.5rem] mt-[0.1rem] md:mt-0 xl:w-[1.5em] md:absolute left-[12rem] top-2.5 md:left-[1.2rem] md:top-2.5 xl:top-2  xl:left-[2.5rem] 2xl:left-[4rem]" src={google}/><span className="ms-3"> Sign-In with Google</span></button>
+                                 <button onClick={() => window.location.href = 'https://wanderlust-website-md7k.onrender.com/api/onabording/login/google'} type="button"  className=" mt-4   flex justify-content-center md:relative border border-1 border-black p-2 w-[90%]   md:w-[40%] font-bold" style={{borderRadius:"10px", backgroundColor:'white',color:"black"}}><img className=" h-[1.3rem] w-[1.3rem] xl:h-[1.5rem] mt-[0.1rem] md:mt-0 xl:w-[1.5em] md:absolute left-[12rem] top-2.5 md:left-[1.2rem] md:top-2.5 xl:top-2  xl:left-[2.5rem] 2xl:left-[4rem]" src={google}/><span className="ms-3"> Sign-In with Google</span></button>
                                  <button onClick={toSignup}  className="border border-1 border-black p-2 w-[90%] md:w-[40%] font-bold mt-4"  style={{borderRadius:"10px", backgroundColor:'black',color:"white"}}>Register</button>
                           </div>
                           

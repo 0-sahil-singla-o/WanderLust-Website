@@ -3,7 +3,7 @@ import { useState,useEffect } from "react"
 export default function Homepage(){
     const [count,setCount]= useState(1); 
     useEffect(()=>{
-        fetch("http://localhost:4000/api",{
+        fetch("https://wanderlust-website-md7k.onrender.com/api",{
             method:"GET",
             credentials:"include"
         })

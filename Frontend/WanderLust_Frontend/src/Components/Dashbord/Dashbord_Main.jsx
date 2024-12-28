@@ -83,7 +83,7 @@ export default function Dashbord_Main(){
     }
     function edit(id){
       
-       fetch(`http://localhost:4000/api/dashbord/editlistingform/${id}`,{
+       fetch(`https://wanderlust-website-md7k.onrender.com/api/dashbord/editlistingform/${id}`,{
             method:"GET",
              credentials:"include"
         })
@@ -130,7 +130,7 @@ export default function Dashbord_Main(){
   
     }
     function Delete(id){
-        fetch(`http://localhost:4000/api/dashbord/delete/${id}`,{
+        fetch(`https://wanderlust-website-md7k.onrender.com/api/dashbord/delete/${id}`,{
             method:"DELETE",
              credentials:"include"
         })
@@ -179,7 +179,7 @@ export default function Dashbord_Main(){
     useEffect(()=>{
         let page= SearchParams.get("page");
         console.log(page)
-        fetch(`http://localhost:4000/api/dashbord/?page=${page}`,{
+      const Listings=()=>{  fetch(`https://wanderlust-website-md7k.onrender.com/api/dashbord/?page=${page}`,{
             method:"GET",
             credentials:"include"
         })
@@ -189,6 +189,47 @@ export default function Dashbord_Main(){
                 .then((result)=>{
                     console.log(result)
                     setListings(result.data.listings);
+                })
+            }
+            else{
+                response.json()
+                .then((error)=>{
+                    toast.error(error.message.msg, {
+                        position: "top-right",
+                        autoClose: 1500,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "light",
+                        });
+                }) 
+            }
+        })
+        .catch((error)=>{
+            toast.error("server error!!", {
+                position: "top-right",
+                autoClose: 1500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+                console.log(error.message);
+        })}
+const TotalPages=()=>{
+     fetch(`https://wanderlust-website-md7k.onrender.com/api/dashbord/?page=${page}`,{
+            method:"GET",
+            credentials:"include"
+        })
+        .then((response)=>{
+            if(response.ok){
+                response.json()
+                .then((result)=>{
+                    console.log(result)
                     settotalPages(result.data.totalPages)
                 })
             }
@@ -221,6 +262,9 @@ export default function Dashbord_Main(){
                 });
                 console.log(error.message);
         })
+}
+        Listings()
+        TotalPages()
     },[page])
 
     return (

@@ -10,7 +10,7 @@ export default function     MainProvider({children}){
     const [totalPages,settotalPages]= useState(1);
     useEffect(()=>{
         const Authentication= ()=>{
-            fetch("http://localhost:4000/api/isAuthenticated",{
+            fetch("https://wanderlust-website-md7k.onrender.com/api/isAuthenticated",{
                 method:"GET",
                 credentials:"include"
             })

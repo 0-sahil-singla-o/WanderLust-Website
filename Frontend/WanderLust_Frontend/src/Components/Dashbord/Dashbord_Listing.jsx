@@ -17,7 +17,7 @@ export default function Dashbord_Lisiting(){
     const navigate= useNavigate();
     function edit(id){
       
-        fetch(`http://localhost:4000/api/dashbord/editlistingform/${id}`,{
+        fetch(`https://wanderlust-website-md7k.onrender.com/api/dashbord/editlistingform/${id}`,{
              method:"GET",
               credentials:"include"
          })
@@ -63,7 +63,7 @@ export default function Dashbord_Lisiting(){
    
      }
      function Delete(id){
-        fetch(`http://localhost:4000/api/dashbord/delete/${id}`,{
+        fetch(`https://wanderlust-website-md7k.onrender.com/api/dashbord/delete/${id}`,{
             method:"DELETE",
              credentials:"include"
         })
@@ -106,7 +106,7 @@ export default function Dashbord_Lisiting(){
     useEffect(()=>{
         const listingdata=()=>{
             
-            fetch(`http://localhost:4000/api/dashbord/${id}`,{
+            fetch(`https://wanderlust-website-md7k.onrender.com/api/dashbord/${id}`,{
                 method:"GET",
                  credentials:"include"
              })
@@ -152,7 +152,7 @@ export default function Dashbord_Lisiting(){
              })
         }
        const reviewData=()=>{
-        fetch(`http://localhost:4000/api/dashbord/${id}`,{
+        fetch(`https://wanderlust-website-md7k.onrender.com/api/dashbord/${id}`,{
             method:"GET",
              credentials:"include"
          })
@@ -197,7 +197,7 @@ export default function Dashbord_Lisiting(){
          })
        }
        const currentUserData= ()=>{
-        fetch(`http://localhost:4000/api/dashbord/${id}`,{
+        fetch(`https://wanderlust-website-md7k.onrender.com/api/dashbord/${id}`,{
             method:"GET",
              credentials:"include"
          })
