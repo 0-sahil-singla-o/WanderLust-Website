@@ -33,8 +33,8 @@ export default function Login(){
             })
             .then((response)=>{
                   if(response.ok){
-                      navigate("/dashbord");
-                      window.location.reload();
+                      navigate("/dashbord")
+                      login();
                   }
                   else{
                       response.json()
