@@ -47,7 +47,9 @@ const sessionOptions= {
         expires: Date.now() + 7*24*60*60*1000 ,// 7 days
         maxAge:  7*24*60*60*1000,
         httpOnly: true,
-        sameSite: 'none'
+        sameSite: 'none',
+        secure: true,
+        domain: '.onrender.com',
     },
     rolling: false,   // to like prevent the updation of expiration time after every access of session Id during request.
 }
