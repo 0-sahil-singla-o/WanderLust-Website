@@ -47,7 +47,7 @@ const sessionOptions= {
         expires: Date.now() + 7*24*60*60*1000 ,// 7 days
         maxAge:  7*24*60*60*1000,
         httpOnly: true,
-        sameSite: 'none',
+        sameSite: 'None',
         secure: true,
         domain: '.onrender.com',
     },
@@ -70,7 +70,7 @@ passport.use(new GoogleStrategy(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: 'https://wanderlust-website-1-3g7o.onrender.com/api/onabording/login/google/callback'
+      callbackURL: 'https://wanderlust-website-md7k.onrender.com/api/onabording/login/google/callback'
     },
     async (accessToken, refreshToken, profile, done) => {
       try {
