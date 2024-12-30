@@ -3,8 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {  
-    "start": "vite",
+  "scripts": {
+     "start": "serve -s dist",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -24,6 +24,7 @@
     "react-router-dom": "^7.0.2",
     "react-slick": "^0.30.3",
     "react-toastify": "^10.0.6",
+    "serve": "^14.2.4",
     "styled-components": "^6.1.13",
     "yup": "^1.4.0"
   },
