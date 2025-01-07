@@ -65,7 +65,7 @@ const GoogleLogin= async function(req,res,next){
                return res.status(500).send({status:false,message:{path:"server",msg:err.message}})
             }
             req.session.count = count;
-            return res.redirect("http://localhost:5173/dashbord");
+            return res.redirect("https://wanderlust-website-1-3g7o.onrender.com/dashbord");
           })
       })(req, res, next); 
    }catch(err){
