@@ -112,7 +112,7 @@ passport.use(new GoogleStrategy(
 
 // it will add our User to the session and also deserialize it whenever user's session is completed or expired.
 passport.serializeUser((user,done)=>{
-    console.log(user);
+    console.log("this working?????");
     done(null,user._id);
 });
 
