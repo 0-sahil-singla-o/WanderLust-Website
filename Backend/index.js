@@ -49,7 +49,6 @@ const sessionOptions= {
         httpOnly: true,
         sameSite: 'None',
         secure: true,
-        domain: '.onrender.com',
     }
 
 }
