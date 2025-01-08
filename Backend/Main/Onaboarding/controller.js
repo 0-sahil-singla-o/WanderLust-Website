@@ -28,7 +28,7 @@ const login= async function(req,res,next){
       const count = req.session.count;
       passport.authenticate("local",(err,user,info)=>{
          if(err){
-            return res.status(500).send({status:false,message:{path:"server",msg:err.message}})
+            return res.status(500).send({status:false,message:{path:"Strategyserver",msg:err.message}})
          }
          if(!user){
             return res.status(400).send({status:false,message:{path:"login",msg:info.name}})
@@ -44,7 +44,7 @@ const login= async function(req,res,next){
        
       })(req, res, next); // this is the middleware so we have to use this in the last..
    }catch(err){
-      return res.status(500).send({status:false,message:{path:"server",msg:err.message}})
+      return res.status(500).send({status:false,message:{path:"Routeserver",msg:err.message}})
    }
 }
 
