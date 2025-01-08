@@ -24,7 +24,7 @@ Connect();
 app.use(express.json({limit:"50mb"}));
 app.use(express.urlencoded({limit:"50mb",extended:false}));
  
-
+app.set('trust proxy', 1)
 
 const store= MongoStore.create({
   mongoUrl: DatabaseUrl,
