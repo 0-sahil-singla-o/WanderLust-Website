@@ -50,8 +50,8 @@ const sessionOptions= {
         sameSite: 'None',
         secure: true,
         domain: '.onrender.com',
-    },
-    rolling: false,   // to like prevent the updation of expiration time after every access of session Id during request.
+    }
+    
 }
 
 // making session stateful protocol->
