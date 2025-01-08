@@ -141,6 +141,7 @@ app.get("/api",(req,res,next)=>{
         else{
             req.session.count=2;
         }
+        console.log(res.getHeaders()); 
         return res.status(200).send({status:true,message:"everything works correct!!",data:req.session.count});
     }
     catch(error){
