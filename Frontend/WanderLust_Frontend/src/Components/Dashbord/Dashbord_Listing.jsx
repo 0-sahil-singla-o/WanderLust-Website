@@ -261,7 +261,7 @@ export default function Dashbord_Lisiting(){
         validationSchema:validations,
         onSubmit:(values,{resetForm})=>{
             console.log(values);
-            fetch(`http://localhost:4000/api/dashbord/${id}/review`,{
+            fetch(`https://wanderlust-website-md7k.onrender.com/api/dashbord/${id}/review`,{
                 method:"POST",
                 headers:{'Content-Type':'application/json'},
                 body:JSON.stringify(values),
@@ -309,7 +309,7 @@ export default function Dashbord_Lisiting(){
 
     })
     function DeleteReview(reviewId){
-        fetch(`http://localhost:4000/api/dashbord/${id}/review/${reviewId}`,{
+        fetch(`https://wanderlust-website-md7k.onrender.com/api/dashbord/${id}/review/${reviewId}`,{
             method:"DELETE",
              credentials:"include"
         })
