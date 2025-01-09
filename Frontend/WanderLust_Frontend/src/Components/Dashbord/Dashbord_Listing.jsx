@@ -114,7 +114,6 @@ export default function Dashbord_Lisiting(){
               if(response.ok){
                   response.json()
                   .then((result)=>{
-                     console.log(result.data.listingData)
                      setLisitingData(result.data.listingData);
                      
                   })
@@ -260,7 +259,6 @@ export default function Dashbord_Lisiting(){
         initialValues:initialValues,
         validationSchema:validations,
         onSubmit:(values,{resetForm})=>{
-            console.log(values);
             fetch(`https://wanderlust-website-md7k.onrender.com/api/dashbord/${id}/review`,{
                 method:"POST",
                 headers:{'Content-Type':'application/json'},
@@ -406,7 +404,7 @@ export default function Dashbord_Lisiting(){
                                                                                                                       return <div className="flex  flex-col p-3 border border-1 border-black mx-2 my-2" style={{borderRadius:"20px",height:"auto"}}>
                                                                                                                               
                                                                                                                               <div className="flex items-center">
-                                                                                                                                   {console.log(singleReview.author.avatar)}
+                                                                                                                                  
                                                                                                                                    <img className="h-[4rem] rounded-full " src={(singleReview.author && singleReview.author.avatar) ? singleReview.author.avatar: unknown } loading="lazy" />
                                                                                                                                    <h4 className="my-1 ms-3 text-[1.5rem]">{singleReview.author.name}</h4>
                                                                                                                               </div>
